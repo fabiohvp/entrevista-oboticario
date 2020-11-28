@@ -1,0 +1,23 @@
+{
+  "name": "OBoticario",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node-dev ./src/server.js",
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.3",
+    "hapi-pino": "^8.3.0",
+    "hapijs-status-monitor": "^1.0.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "node-dev": "^6.2.0"
+  }
+}

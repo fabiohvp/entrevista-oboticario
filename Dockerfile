@@ -1,0 +1,5 @@
+FROM node:12.14
+
+COPY . .
+
+EXPOSE 3000

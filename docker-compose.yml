@@ -1,0 +1,36 @@
+version: "2"
+
+services:
+  server:
+    build: .
+    command: bash -c "npm i && npm run start"
+    environment:
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: senha123!
+    # volumes:
+    #   - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    # links:
+    #     - mongo
+    # networks:
+    #     - mongo-compose-network
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: senha123!
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - /home/fabiohvp/Desenvolvimento/Docker/Volumes/MongoDB:/data/db
+#     networks:
+#       - mongo-compose-network
+
+# networks:
+#   mongo-compose-network:
+#     driver: bridge
