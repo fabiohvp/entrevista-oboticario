@@ -13,8 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^20.0.3",
+    "cpf": "^2.0.1",
     "hapi-pino": "^8.3.0",
     "hapijs-status-monitor": "^1.0.1",
+    "joi": "^17.3.0",
+    "mongodb": "^3.6.3",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {

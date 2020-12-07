@@ -1,4 +1,4 @@
-//só uma brincadeira, não está sendo utilizado
+//só um teste, não está sendo utilizado
 const { readdirSync, statSync } = require("fs");
 const { join } = require("path");
 

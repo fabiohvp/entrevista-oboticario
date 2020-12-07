@@ -13,11 +13,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - mongo
-    # links:
-    #     - mongo
-    # networks:
-    #     - mongo-compose-network
+  #     - mongo
 
   mongo:
     image: mongo
@@ -26,11 +22,3 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: senha123!
     ports:
       - "27017:27017"
-    # volumes:
-    #   - /home/fabiohvp/Desenvolvimento/Docker/Volumes/MongoDB:/data/db
-#     networks:
-#       - mongo-compose-network
-
-# networks:
-#   mongo-compose-network:
-#     driver: bridge

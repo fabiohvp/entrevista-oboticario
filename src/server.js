@@ -1,5 +1,6 @@
 "use strict";
 const Hapi = require("@hapi/hapi");
+const { connect } = require("./database");
 const compraRoutes = require("./routes/compra/index");
 const revendedorRoutes = require("./routes/revendedor/index");
 const usuarioRoutes = require("./routes/usuario/index");
@@ -20,7 +21,13 @@ const init = async () => {
   await server.start();
   await server.register({ plugin: require("hapijs-status-monitor") });
   //await server.register({ plugin: require("hapi-pino") });
-
+  await connect({
+    username: "root",
+    password: "senha123!",
+    host: "0.0.0.0",
+    port: 27017,
+    collection: "boticario",
+  });
   console.log("Server running on %s", server.info.uri);
   return server;
 };
